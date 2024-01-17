@@ -1,120 +1,59 @@
-<!DOCTYPE html> 
-<html>
-    <head>
-        <title>Document</title>
-        <script src="Main.js"></script> 
-    </head>
-<body>
-    <center>
-    <body bgcolor="Chocolate"></body>
-    <h1 style="color:whitesmoke;"><bold>Scouting Form</bold></h1>
-    <form>
-        <label for="fname"><h3 style="color:whitesmoke;">Scouter's Name:</h3></label>
-        <input type="text" id="fname" name="fname"><br>
-    </form>
-    <p> <br> </p>
-    <h3 style="color:whitesmoke"> Team Scouting</h3>
-    <form>
-        <input type="radio" id="Red1" name="Robot_Scouting" value="Red1">
-        <label for="Red1" style="color:whitesmoke">Red Left</label><br>
-        <input type="radio" id="Red2" name="Robot_Scouting" value="Red2">
-        <label for="Red2" style="color:whitesmoke">Red Center</label><br>
-        <input type="radio" id="Red3" name="Robot_Scouting" value="Red3">
-        <label for="Red3" style="color:whitesmoke">Red Right</label><br>
-        
-        <input type="radio" id="Blue1" name="Robot_Scouting" value="Blue1">
-        <label for="Blue1" style="color:whitesmoke">Blue Left</label><br>
-        <input type="radio" id="Blue2" name="Robot_Scouting" value="Blue2">
-        <label for="Blue2" style="color:whitesmoke">Blue Center</label><br>
-        <input type="radio" id="Blue3" name="Robot_Scouting" value="Blue3">
-        <label for="Blue3" style="color:whitesmoke">Blue Right</label><br>
-    </form>
-    <p> <br> </p>
-    <form>
-        <label for="tNumber"> <h3 style="color:whitesmoke;"> Team Number: </h3> </label>
-        <input type="text" id="tNumber" name="tNumber"><br>
-    </form>
-    <p> <br> </p>
-    <form>
-        <label for="mNumber"> <h3 style="color:whitesmoke;"> Match Number: </h3> </label>
-        <input type="text" id="mNumber" name="mNumber"><br>
-    </form>
-    <p> <br> <br> <br> <br> </p>
-<h1 style="color:whitesmoke;"> Auton Points </h1>
-    <div>
-        <h3 style="color:whitesmoke;"> Amp Scores </h3>
-        <button id="increment-btn" onclick="increase()">+</button>
-        <div id="counter-value">0</div>
-        <button id="decrement-btn" onclick="decrease()">-</button>
-    </div>
-<p> </p>
-    <div>
-        <h3 style="color:whitesmoke;"> Speaker Scores </h3>
-        <button id="increment-btn" onclick="increase1()">+</button>
-        <div id="counter-value1">0</div>
-        <button id="decrement-btn" onclick="decrease1()">-</button>
-    </div>
-<p> </p>
-<h1 style="color:whitesmoke;"> Tele-Op Points </h1>
-    <div>
-        <h3 style="color:whitesmoke;"> Amp Scores </h3>
-        <button id="increment-btn" onclick="increase2()">+</button>
-        <div id="counter-value2">0</div>
-        <button id="decrement-btn" onclick="decrease2()">-</button>
-    </div>
-    <p> </p>
-    <div>
-        <h3 style="color:whitesmoke;"> Speaker Scores </h3>
-        <button id="increment-btn" onclick="increase3()">+</button>
-        <div id="counter-value3">0</div>
-        <button id="decrement-btn" onclick="decrease3()">-</button>
-    </div>
-<p> <br> <br> <br> <br> </p>
-<h1 style="color:whitesmoke;"> End/Post Game </h1> <br>
-<form>
-<h3 style="color:whitesmoke;">Final Points</h3>
-    <input type="checkbox" id="C1" name="C1" value="C1">
-    <label for="C1" style="color:whitesmoke;"> On Stage  </label><br>
-    <input type="checkbox" id="C2" name="C2" value="C2">
-    <label for="C2" style="color:whitesmoke;"> Sync-ed </label><br>
-    <input type="checkbox" id="C3" name="C3" value="C3">
-    <label for="C3" style="color:whitesmoke;"> Disc Thrown (landed) </label><br>
-</form>
-<h3 style="color:whitesmoke;">Personal Reflection on Team</h3>
-    <form>
-        <input type="radio" id="1star" name="Robot_Rating" value="1star">
-        <label for="1star" style="color:whitesmoke;">Not Ideal</label><br>
-        <input type="radio" id="2star" name="Robot_Rating" value="2star">
-        <label for="2star" style="color:whitesmoke;">Satisfactory</label><br>
-        <input type="radio" id="3star" name="Robot_Rating" value="3star">
-        <label for="3star" style="color:whitesmoke;">Average</label><br>
-        <input type="radio" id="4star" name="Robot_Rating" value="4star">
-        <label for="4star" style="color:whitesmoke;">Great</label><br>
-        <input type="radio" id="5star" name="Robot_Rating" value="5star">
-        <label for="5star" style="color:whitesmoke;">Splendid</label><br>
-    </form>
-<h3 style="color:whitesmoke;">Robot traveled on the...</h3>
-    <input type="radio" id="amp-side" name="Robot_Pathing" value="amp-side">
-        <label for="amp-side" style="color:whitesmoke;">Amp-side of the field</label><br>
-        <input type="radio" id="human-player" name="Robot_Pathing" value="human-player">
-        <label for="human-player" style="color:whitesmoke;">Human player-side of field</label><br>
-        <input type="radio" id="center" name="Robot_Pathing" value="center">
-        <label for="center" style="color:whitesmoke;">Center of the field</label><br>
-    <form>
-    <h3 style="color:whitesmoke;">Game pieces were picked up...</h3>
-    <input type="radio" id="human-sup" name="Robot_Method" value="human-sup">
-        <label for="human-sup" style="color:whitesmoke;">From the Human Player</label><br>
-        <input type="radio" id="field" name="Robot_Method" value="field">
-        <label for="field" style="color:whitesmoke;">From the Field</label><br>
-        <input type="radio" id="mix" name="Robot_Method" value="mix">
-        <label for="mix" style="color:whitesmoke;">From both</label><br>
-    <form>
-        <label for="comments"><h3 style="color:whitesmoke;">Any feedback or comments?:</h3></label>
-        <input type="text" id="comments" name="comments"><br>
-    </form>
-    <form>
-        <button id="Submit" onclick="submit()">Submit Form</button>
-    </form>
+<!DOCTYPE html>
+<center>
+    <h1 style="color:chocolate;"><bold>Scouting Form</bold></h1>
+ 
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js">
+    </script>
+</head>
+ 
+
+    <main>
+        <form action="/"
+              id="qr-generation-form">
+            <input type="text"
+                   name="qr-code-content"
+                   id="qr-content"
+                   value="hello"
+                   autocomplete="off" />
+            <input type="submit"
+                   value="Generate QR Code" />
+        </form><br />
+        <div id="qr-code"></div>
+    </main>
 </body>
-</center>
+<script>
+    let qrContentInput = document.getElementById("qr-content");
+    let qrGenerationForm = document.getElementById("qr-generation-form");
+    let qrCode;
+     
+    function generateQrCode(qrContent) {
+      return new QRCode("qr-code", {
+        text: qrContent,
+        width: 256,
+        height: 256,
+        colorDark: "#000000",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H,
+      });
+    }
+     
+    // Event listener for form submit event
+    qrGenerationForm.addEventListener("submit", function (event) {
+      // Prevent form submission
+      event.preventDefault();
+      let qrContent = qrContentInput.value;
+      if (qrCode == null) {
+           
+        // Generate code initially
+        qrCode = generateQrCode(qrContent);
+      } else {
+           
+        // If code already generated then make 
+        // again using same object
+        qrCode.makeCode(qrContent);
+      }
+    });
+</script>
+ 
 </html>
